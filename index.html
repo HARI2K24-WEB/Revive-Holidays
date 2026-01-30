@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVIVE HOLIDAYS - Best Trip Planner</title>
+    <link rel="icon" href="images/fevicon.png" type="image/x-icon">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+  
+   
+</head>
+<body>
+    <!-- ==================== HEADER/NAV ==================== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <img src="images/logo.png" alt="Revive Holidays Logo" style="height: 40px; width: auto; margin-right: 0.5rem;">
+                 REVIVE HOLIDAYS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="background-image: none;">
+                    <i class="fas fa-bars" style="color: var(--primary-yellow);"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#moments">Moments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="typing-text">THE BEST TRIP PLANNER</span><br>
+                <span class="coimbatore"> in Coimbatore...!!!</span>
+            </h1>
+            
+            <p class="hero-quote"> "Discover the world, one journey at a time"</p>
+
+            <button class="book-now-btn" onclick="document.getElementById('packages').scrollIntoView({behavior: 'smooth'});">BOOK NOW</button>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT US SECTION ==================== -->
+    <section class="about-section" id="about">
+        <h2 class="section-title">About Us</h2>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Your Journey Starts Here</h3>
+                <p>At REVIVE HOLIDAYS, we believe that travel is more than just visiting new places—it's about creating unforgettable memories and experiencing the world in a whole new way.</p>
+                <p>With over a decade of expertise in crafting personalized travel experiences, our team of dedicated professionals is committed to making your dream vacation a reality.</p>
+                <p>From exotic beach destinations to thrilling mountain adventures, we curate every detail to ensure your journey is nothing short of spectacular.</p>
+                <button class="book-now-btn" style="margin-top: 1rem;">Explore More</button>
+            </div>
+
+            <div class="about-images">
+                <div class="image-placeholder image-1">
+                    <img src="images/admin1.jpeg" alt="About Us Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 30px;">
+                </div>
+                <div class="image-placeholder image-2">
+                    <img src="images/admin2.jpeg" alt="About Us Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 30px;">
+                </div>
+            </div>
+        </div>
+    
+
+    <!-- ==================== INFO BANNERS ==================== -->
+    <section style="background: var(--white);">
+        <div class="info-banners">
+            <div class="banner banner-yellow">
+               <i class="fas fa-map-marker-alt"></i>
+                <div class="banner-number" data-target="50">0</div>
+                <div class="banner-text">Destinations</div>
+            </div>
+            <div class="banner banner-yellow">
+                <i class="fas fa-water"></i>
+                 <i class="bi bi-crosshair"></i>
+                <div class="banner-number" data-target="5000">0</div>
+                <div class="banner-text">Happy Travelers</div>
+            </div>
+            <div class="banner banner-yellow">
+                <i class="fas fa-chart-line"></i>
+                <div class="banner-number" data-target="50">0</div>
+                <div class="banner-text">Packages</div>
+            </div>
+            <div class="banner banner-yellow">
+                <i class="fas fa-award"></i>
+                <div class="banner-number" data-target="2">0</div>
+                <div class="banner-text">Years Experience</div>
+            </div>
+        </div>
+    </section>
+        
+    </section>
+
+    <!-- ==================== PACKAGES SECTION ==================== -->
+    <section class="packages-section" id="packages">
+        <h2 class="section-title">Our Packages</h2>
+
+        <!-- Destination Tabs -->
+        <div class="destination-tabs">
+            <button class="destination-tab active" data-destination="munnar">
+                <i class="fas fa-leaf"></i>
+                <span>Munnar</span>
+            </button>
+            <button class="destination-tab" data-destination="goa">
+                <i class="fas fa-umbrella-beach"></i>
+                <span>Goa</span>
+            </button>
+            <button class="destination-tab" data-destination="kanthalloor">
+                <i class="fas fa-mountain"></i>
+                <span>Kanthalloor</span>
+            </button>
+
+        </div>
+
+        <!-- Packages Display -->
+        <div class="packages-content">
+
+            <!-- Munnar Packages -->
+            <div class="package-destination active" data-destination="munnar">
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <div class="package-image green">
+                            <img src="images/package/munnar1.jpg" alt="Munnar Paradise" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Munnar Paradise</h4>
+                            <p class="package-duration">5 Days / 4 Nights</p>
+                            <p class="package-description">Experience the lush green hills of Munnar with tea plantations and misty mountains.</p>
+                            <div class="package-price">₹12,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-image green">
+                            <img src="images/package/munnar2.jpg" alt="Munnar Trail Explorer" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Munnar Trail Explorer</h4>
+                            <p class="package-duration">6 Days / 5 Nights</p>
+                            <p class="package-description">Trek through scenic trails, visit spice gardens, and enjoy local cuisine.</p>
+                            <div class="package-price">₹14,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+                     <div class="package-card">
+                        <div class="package-image green">
+                            <img src="images/package/munnar3.jpg" alt="Munnar Trail Explorer" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Munnar Trail Explorer</h4>
+                            <p class="package-duration">6 Days / 5 Nights</p>
+                            <p class="package-description">Trek through scenic trails, visit spice gardens, and enjoy local cuisine.</p>
+                            <div class="package-price">₹14,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+                     <div class="package-card">
+                        <div class="package-image green">
+                            <img src="images/package/munnar4.jpg" alt="Munnar Trail Explorer" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Munnar Trail Explorer</h4>
+                            <p class="package-duration">6 Days / 5 Nights</p>
+                            <p class="package-description">Trek through scenic trails, visit spice gardens, and enjoy local cuisine.</p>
+                            <div class="package-price">₹14,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goa Packages -->
+            <div class="package-destination" data-destination="goa">
+                <div class="packages-grid">
+
+                    <div class="package-card">
+                        <div class="package-image blue">
+                            <img src="images/package/goa1.jpg" alt="Goa Getaway" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Goa Getaway</h4>
+                            <p class="package-duration">4 Days / 3 Nights</p>
+                            <p class="package-description">Relax on pristine beaches, enjoy water sports, and experience vibrant nightlife.</p>
+                            <div class="package-price">₹9,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+
+                    <div class="package-card">
+                        <div class="package-image blue">
+                            <img src="images/package/goa2.jpg" alt="Goa Beach Bliss" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Goa Beach Bliss</h4>
+                            <p class="package-duration">5 Days / 4 Nights</p>
+                            <p class="package-description">Beach resort stay with water activities, spa treatments, and local tours.</p>
+                            <div class="package-price">₹11,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+                     <div class="package-card">
+                        <div class="package-image blue">
+                            <img src="images/package/goa3.jpg" alt="Goa Beach Bliss" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Goa Beach Bliss</h4>
+                            <p class="package-duration">5 Days / 4 Nights</p>
+                            <p class="package-description">Beach resort stay with water activities, spa treatments, and local tours.</p>
+                            <div class="package-price">₹11,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+
+                     <div class="package-card">
+                        <div class="package-image blue">
+                            <img src="images/package/goa4.jpeg" alt="Goa Beach Bliss" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Goa Beach Bliss</h4>
+                            <p class="package-duration">5 Days / 4 Nights</p>
+                            <p class="package-description">Beach resort stay with water activities, spa treatments, and local tours.</p>
+                            <div class="package-price">₹11,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- kanthalloor Packages -->
+            <div class="package-destination" data-destination="kanthalloor">
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <div class="package-image orange">
+                            <img src="images/package/kanthalloor1.jpeg" alt="Himalayan Trek" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Himalayan Trek</h4>
+                            <p class="package-duration">7 Days / 6 Nights</p>
+                            <p class="package-description">Adventure awaits in the majestic Himalayas with breathtaking views and thrilling trails.</p>
+                            <div class="package-price">₹15,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-image orange">
+                            <img src="images/package/kanthalloor2.jpeg" alt="Kanthalloor Explorer" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Kanthalloor Explorer</h4>
+                            <p class="package-duration">8 Days / 7 Nights</p>
+                            <p class="package-description">Visit monasteries, Pangong Lake, and experience high altitude adventure.</p>
+                            <div class="package-price">₹18,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-image orange">
+                            <img src="images/package/kanthalloor3.jpeg" alt="Kanthalloor Explorer" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Kanthalloor Explorer</h4>
+                            <p class="package-duration">8 Days / 7 Nights</p>
+                            <p class="package-description">Visit monasteries, Pangong Lake, and experience high altitude adventure.</p>
+                            <div class="package-price">₹18,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="package-card">
+                        <div class="package-image orange">
+                            <img src="images/package/Kanthalloor4.jpeg" alt="Kanthalloor Explorer" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="package-info">
+                            <h4 class="package-name">Kanthalloor Explorer</h4>
+                            <p class="package-duration">8 Days / 7 Nights</p>
+                            <p class="package-description">Visit monasteries, Pangong Lake, and experience high altitude adventure.</p>
+                            <div class="package-price">₹18,999</div>
+                            <a href="#" class="btn-price">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ==================== QUOTE SECTION ==================== -->
+    <section class="quote-section">
+        <div class="quote-container">
+            <div class="wave-container">
+        <div class="wave-track">
+            <svg class="wave-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FF4500;stop-opacity:1" /> <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" /> <stop offset="100%" style="stop-color:#FF4500;stop-opacity:1" /> </linearGradient>
+                </defs>
+                <path d="M0,100 C150,200 250,0 500,100 C750,200 850,0 1000,100" 
+                      stroke="url(#waveGradient)" 
+                      stroke-width="5" 
+                      fill="none" 
+                      stroke-linecap="round"/>
+            </svg>
+        </div>
+    </div>
+                <!-- Quote Track -->
+                <div class="quote-track">
+                    <div class="quote-card">PLAN</div>
+                    <div class="quote-card">PACK</div>
+                    <div class="quote-card">EXPLORE</div>
+                    <div class="quote-card">REPEAT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HAPPY MOMENTS SECTION ==================== -->
+    <section class="moments-section" id="moments">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+            <h2 class="section-title" style="margin: 0;">Happy Moments</h2>
+            <button class="gallery-btn" onclick="openGalleryModal()">
+                <i class="fas fa-images"></i>
+                Gallery
+            </button>
+        </div>
+
+        <!-- Left to Right Carousel -->
+        <div class="carousel-wrapper">
+            <div class="carousel-track carousel-ltr">
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip1.png" alt="Moment 1" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip2.png" alt="Moment 2" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip3.png" alt="Moment 3" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip4.png" alt="Moment 4" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip5.png" alt="Moment 5" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip6.png" alt="Moment 6" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip7.png" alt="Moment 1" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip1.png" alt="Moment 2" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right to Left Carousel -->
+        <div class="carousel-wrapper">
+            <div class="carousel-track carousel-rtl">
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip4.png" alt="Moment 7" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip7.png" alt="Moment 8" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip2.png" alt="Moment 9" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip3.png" alt="Moment 10" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip4.png" alt="Moment 11" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip5.png" alt="Moment 12" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip7.png" alt="Moment 7" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="carousel-item-moment">
+                    <img src="images/moments/trip8.png" alt="Moment 8" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="moment-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY MODAL ==================== -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-overlay" onclick="closeGalleryModal()"></div>
+        <div class="gallery-content">
+            <div class="gallery-header">
+                <h2>Gallery - Places & Memories</h2>
+                <button class="gallery-close" onclick="closeGalleryModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Gallery Tabs -->
+            <div class="gallery-tabs">
+                <button class="gallery-tab active" data-destination="munnar">
+                    <i class="fas fa-leaf"></i> Munnar
+                </button>
+                <button class="gallery-tab" data-destination="goa">
+                    <i class="fas fa-umbrella-beach"></i> Goa
+                </button>
+                <button class="gallery-tab" data-destination="ladakh">
+                    <i class="fas fa-mountain"></i> Ladakh
+                </button>
+                <button class="gallery-tab" data-destination="rajasthan">
+                    <i class="fas fa-crown"></i> Rajasthan
+                </button>
+                <button class="gallery-tab" data-destination="kerala">
+                    <i class="fas fa-water"></i> Kerala
+                </button>
+            </div>
+
+            <!-- Gallery Content -->
+            <div class="gallery-main">
+                <!-- Munnar Gallery -->
+                <div class="gallery-destination active" data-destination="munnar">
+                    <div class="gallery-grid">
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-munnar1.jpg" alt="Tea Plantations" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Tea Plantations</span>
+                        </div>
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-munnar2.jpg" alt="Mountain Views" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Mountain Views</span>
+                        </div>
+                        <div class="gallery-card video">
+                            <img src="images/gallery-munnar-video.jpg" alt="Adventure Video" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Adventure Video</span>
+                        </div>
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-munnar3.jpg" alt="Local Culture" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Local Culture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goa Gallery -->
+                <div class="gallery-destination" data-destination="goa">
+                    <div class="gallery-grid">
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-goa1.jpg" alt="Beach Paradise" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Beach Paradise</span>
+                        </div>
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-goa2.jpg" alt="Water Sports" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Water Sports</span>
+                        </div>
+                        <div class="gallery-card video">
+                            <img src="images/gallery-goa-video.jpg" alt="Beach Life Video" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Beach Life Video</span>
+                        </div>
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-goa3.jpg" alt="Sunset Moments" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Sunset Moments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ladakh Gallery -->
+                <div class="gallery-destination" data-destination="ladakh">
+                    <div class="gallery-grid">
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-ladakh1.jpg" alt="High Peaks" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>High Peaks</span>
+                        </div>
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-ladakh2.jpg" alt="Snow Views" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Snow Views</span>
+                        </div>
+                        <div class="gallery-card video">
+                            <img src="images/gallery-ladakh-video.jpg" alt="Trek Video" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Trek Video</span>
+                        </div>
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-ladakh3.jpg" alt="Monasteries" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Monasteries</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rajasthan Gallery -->
+                <div class="gallery-destination" data-destination="rajasthan">
+                    <div class="gallery-grid">
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-rajasthan1.jpg" alt="Royal Forts" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Royal Forts</span>
+                        </div>
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-rajasthan2.jpg" alt="Palace Tours" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Palace Tours</span>
+                        </div>
+                        <div class="gallery-card video">
+                            <img src="images/gallery-rajasthan-video.jpg" alt="Heritage Video" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Heritage Video</span>
+                        </div>
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-rajasthan3.jpg" alt="Desert Safari" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Desert Safari</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kerala Gallery -->
+                <div class="gallery-destination" data-destination="kerala">
+                    <div class="gallery-grid">
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-kerala1.jpg" alt="Backwaters" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Backwaters</span>
+                        </div>
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-kerala2.jpg" alt="Spice Gardens" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Spice Gardens</span>
+                        </div>
+                        <div class="gallery-card video">
+                            <img src="images/gallery-kerala-video.jpg" alt="Houseboat Video" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Houseboat Video</span>
+                        </div>
+                        <div class="gallery-card photo">
+                            <img src="images/gallery-kerala3.jpg" alt="Local Life" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span>Local Life</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section class="testimonials-section" id="testimonials">
+        <h2 class="section-title">What People Say</h2>
+
+        <!-- Testimonials Carousel -->
+        <div class="testimonials-carousel-wrapper">
+            <div class="testimonials-track">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card-item">
+                    <div class="testimonial-card-inner">
+                        <div class="testimonial-avatar">
+                            <img src="images/avatar1.jpg" alt="Priya Sharma" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"REVIVE HOLIDAYS made our Munnar trip absolutely unforgettable! The planning was seamless, accommodations were amazing, and the local guides were incredibly knowledgeable."</p>
+                        <p class="testimonial-name">Priya Sharma</p>
+                        <p class="testimonial-role">Travel Enthusiast</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card-item">
+                    <div class="testimonial-card-inner">
+                        <div class="testimonial-avatar avatar2">
+                            <img src="images/avatar2.jpg" alt="Arjun Patel" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Best Goa vacation ever! From beach activities to restaurant recommendations, everything was perfectly coordinated. Highly recommend their services!"</p>
+                        <p class="testimonial-name">Arjun Patel</p>
+                        <p class="testimonial-role">Adventure Lover</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card-item">
+                    <div class="testimonial-card-inner">
+                        <div class="testimonial-avatar avatar3">
+                            <img src="images/avatar3.jpg" alt="Meera Singh" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Their Himalayan trek package exceeded all expectations. The itinerary was well-planned, safety was prioritized, and memories created will last a lifetime."</p>
+                        <p class="testimonial-name">Meera Singh</p>
+                        <p class="testimonial-role">Mountain Trekker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+
+        <div class="contact-content">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="destination">Preferred Destination</label>
+                    <input type="text" id="destination" name="destination" placeholder="Where do you want to go?">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Tell us about your travel plans"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+
+            <div class="map-placeholder">
+                <i class="fas fa-map"></i>
+                <p>Map Placeholder</p>
+                <p style="font-size: 0.9rem; margin-top: 1rem;">123 Travel Street,<br> Adventure City, AC 12345</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4><img src="images/logo.png" alt="Revive Holidays Logo" style="height: 40px; width: auto; margin-right: 0.5rem;"></i> REVIVE HOLIDAYS</h4>
+                <p>Creating unforgettable travel experiences since 2010. Your trusted partner for amazing journeys around the world.</p>
+                <div class="social-icons">
+                    <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+                    <div class="social-icon"><i class="fab fa-twitter"></i></div>
+                    <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                    <div class="social-icon"><i class="fab fa-youtube"></i></div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> +91 93644 37888</p>
+                <p><i class="fas fa-envelope"></i> reviveholiydayss.in@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i>coimbatore, Tamil Nadu</p>
+                <p><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 REVIVE HOLIDAYS. All rights reserved.</a></p>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING ACTION BUTTON ==================== -->
+    <div class="floating-btn" id="floatingBtn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- ==================== BOOKING MODAL ==================== -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Complete Your Booking</h2>
+                <button class="modal-close" onclick="closeBookingModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="booking-package">Package Name</label>
+                    <input type="text" id="booking-package" name="package" readonly placeholder="Selected Package">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-name">Full Name *</label>
+                        <input type="text" id="booking-name" name="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-email">Email Address *</label>
+                        <input type="email" id="booking-email" name="email" required placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-phone">Phone Number *</label>
+                        <input type="tel" id="booking-phone" name="phone" required placeholder="Enter your phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-travelers">Number of Travelers *</label>
+                        <input type="number" id="booking-travelers" name="travelers" min="1" max="20" required placeholder="1">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-date">Preferred Travel Date *</label>
+                        <input type="date" id="booking-date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-accommodation">Accommodation Type *</label>
+                        <select id="booking-accommodation" name="accommodation" required>
+                            <option value="">Select Type</option>
+                            <option value="budget">Budget</option>
+                            <option value="standard">Standard</option>
+                            <option value="luxury">Luxury</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="booking-message">Special Requests</label>
+                    <textarea id="booking-message" name="message" placeholder="Any special requirements or questions?"></textarea>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="booking-terms" name="terms" required>
+                    <label for="booking-terms">I agree to the terms and conditions</label>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn-cancel" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn-submit-booking">Send Booking Request</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
