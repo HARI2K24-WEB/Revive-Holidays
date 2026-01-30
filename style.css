@@ -375,7 +375,7 @@ body {
 
 /* ==================== ABOUT US SECTION ==================== */
 .about-section {
-    padding-left: 100px !important;
+    padding-left: 150px !important;
     padding: 4rem 2rem;
     background: var(--white);
 }
@@ -507,7 +507,7 @@ body {
     width: 280px;
     height: 300px;
     bottom: 20px;
-    right: 0;
+    right: 80px;
     z-index: 1;
     animation: slideInUp 0.8s ease forwards;
     animation-delay: 0.8s;
@@ -515,7 +515,6 @@ body {
 }
 
 .image-placeholder:hover {
-    box-shadow: 1px 5px 5px yellow;
     transition: 2s;
     
 }
@@ -559,7 +558,8 @@ body {
 
 /* ==================== INFO BANNERS ==================== */
 .info-banners {
-    padding: 3rem 2rem;
+    padding-left: 150px;
+    padding: 4rem 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
