@@ -163,8 +163,10 @@ function counterUp(element, target, duration = 2000) {
         if (current >= target) {
             current = target;
             clearInterval(timer);
+            element.textContent = Math.floor(current) + '+';
+            return;
         }
-        element.textContent = Math.floor(current) + (target > 100 ? '' : '');
+        element.textContent = Math.floor(current);
     }, 16);
 }
 
