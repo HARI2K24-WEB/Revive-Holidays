@@ -34,52 +34,6 @@ carouselWrappers.forEach(wrapper => {
         wrapper.scrollLeft = scrollLeft - walk;
     });
 });
-
-// ==================== Gallery Modal Functionality ====================
-function openGalleryModal() {
-    const modal = document.getElementById('galleryModal');
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeGalleryModal() {
-    const modal = document.getElementById('galleryModal');
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-// Gallery tab switching //
-document.addEventListener('DOMContentLoaded', function() {
-    const galleryTabs = document.querySelectorAll('.gallery-tab');
-    const galleryDestinations = document.querySelectorAll('.gallery-destination');
-
-    galleryTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const destination = this.getAttribute('data-destination');
-            
-            // Remove active class from all tabs and destinations
-            galleryTabs.forEach(t => t.classList.remove('active'));
-            galleryDestinations.forEach(d => d.classList.remove('active'));
-            
-            // Add active class to clicked tab and corresponding destination
-            this.classList.add('active');
-            document.querySelector(`[data-destination="${destination}"].gallery-destination`).classList.add('active');
-        });
-    });
-
-    // Close modal when clicking overlay
-    const modal = document.getElementById('galleryModal');
-    const overlay = modal.querySelector('.gallery-overlay');
-    overlay.addEventListener('click', closeGalleryModal);
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeGalleryModal();
-        }
-    });
-});
-
 // ==================== Booking Modal Functionality ====================
 function openBookingModal(packageName) {
     const modal = document.getElementById('bookingModal');

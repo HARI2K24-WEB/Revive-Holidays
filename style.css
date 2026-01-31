@@ -233,155 +233,7 @@ body {
 .book-now-btn:active {
     transform: translateY(-1px);
 }
-/* ==================== Quote SECTION ==================== */
 
-        /* Quote Process Section */
-        .quote-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 900;
-            
-            color: var(--dark-navy);
-            font-family: Georgia, 'Times New Roman', serif;
-            letter-spacing: 2px;
-        }
-
-        /* Quote track with cards */
-        .quote-track {  
-            position: absolute; 
-           margin-top: -230px; 
-           margin-left: 350px;
-            z-index: 100;
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
-        .quote-card {
-            width: 160px;
-            height: 160px;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            font-weight: 900;
-            font-family: Georgia, 'Times New Roman', serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-            transition: all 0.3s ease;
-            z-index: 100;
-            color: #3f3f3f;
-            animation: floatCard 3s ease-in-out infinite;
-        }
-
-        .quote-card:nth-child(1) {
-            background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%);
-            animation-delay: 0s;
-        }
-
-        .quote-card:nth-child(2) {
-            background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%);
-            animation-delay: 0.3s;
-        }
-
-        .quote-card:nth-child(3) {
-            background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%);
-            animation-delay: 0.6s;
-        }
-
-        .quote-card:nth-child(4) {
-            background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%);
-            animation-delay: 0.9s;
-        }
-
-        @keyframes floatCard {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
-        }
-
-        .quote-card:hover {
-            transform: scale(1.08) translateY(-15px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-        }
-
-     
-        @keyframes flowLine {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 200px 0;
-            }
-        }
-        /* Responsive Design */
-        @media (max-width: 900px) {
-            .quote-section {
-                padding: 3rem 1rem;
-            }
-
-            .quote-title {
-                font-size: 2rem;
-            }
-
-            .quote-track {
-                gap: 1.5rem;
-                flex-wrap: wrap;
-            }
-
-            .quote-card {
-                width: 150px;
-                height: 150px;
-                font-size: 1.1rem;
-            }
-
-            .wave-background {
-                height: 250px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .quote-title {
-                font-size: 1.6rem;
-            }
-
-            .quote-track {
-                flex-direction: column;
-                gap: 1rem;
-                flex-wrap: wrap;
-            }
-
-            .timeline-card {
-                width: 140px;
-                height: 140px;
-                font-size: 0.95rem;
-            }
-
-            .wave-background {
-                display: none;
-            }
-
-            .connector-line {
-                display: none;
-            }
-        }
-
-@media (min-width: 768px) {
-    .wave-svg {
-        height: 160px;
-    }
-
-    .quote-card {
-        font-size: 18px;
-        padding: 14px 24px;
-    }
-}
 /* ==================== ABOUT US SECTION ==================== */
 .about-section {
     padding-left: 150px !important;
@@ -1906,5 +1758,116 @@ footer {
 
     .hero-title {
         font-size: 1.8rem;
+    }
+}
+/* ==================== MOBILE RESPONSIVENESS (FULL CODE) ==================== */
+
+@media (max-width: 768px) {
+    
+    /* --- 1. GENERAL LAYOUT RESETS --- */
+    .about-section, 
+    .info-banners, 
+    .feedback-section,
+    .packages-section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        overflow: hidden; /* Prevents horizontal scroll on the body */
+    }
+
+    /* Stack Grids Vertically (Default behavior for sections) */
+    .about-content,
+    .contact-content,
+    .form-row,
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* --- 2. HERO SECTION --- */
+    .hero-content { 
+        margin-right: 0 !important; 
+        text-align: center; 
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    .hero-title { font-size: 2.2rem; }
+    .typing-text { 
+        font-size: 2rem; 
+        white-space: normal; 
+        border: none; 
+        animation: none !important; 
+    }
+
+    /* --- 3. HORIZONTAL SCROLL (PACKAGES & FEEDBACK) --- */
+    /* Applies row-scrolling logic to both containers */
+    .packages-grid,
+    .feedback-track {
+        display: flex !important;        /* Force row layout */
+        grid-template-columns: none;     /* Disable grid */
+        overflow-x: auto;                /* Enable horizontal scrolling */
+        gap: 1rem;                       /* Space between cards */
+        padding: 1rem 0.5rem 2rem;       /* Padding for shadow visibility */
+        scroll-snap-type: x mandatory;   /* Snap effect */
+        -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+        width: 100%;
+    }
+
+    /* Hide Scrollbars */
+    .packages-grid::-webkit-scrollbar,
+    .feedback-track::-webkit-scrollbar {
+        display: none; 
+    }
+    .packages-grid, .feedback-track {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Card Sizing for Scroll */
+    .package-card,
+    .feedback-card-item {
+        min-width: 85vw;                 /* Card takes 85% of screen width */
+        max-width: 85vw;
+        flex-shrink: 0;                  /* Prevent shrinking */
+        scroll-snap-align: center;       /* Snap to center */
+        margin-right: 0;
+    }
+
+    /* Specific adjustment for Feedback wrapper */
+    .feedback-carousel-wrapper {
+        padding: 1rem 0;
+        background: transparent; /* Optional: Cleaner look on mobile */
+    }
+
+    /* --- 4. ABOUT SECTION IMAGES --- */
+    .about-images { 
+        height: auto; 
+        display: flex; 
+        justify-content: center; 
+        gap: 1rem; 
+        margin-top: 2rem; 
+    }
+    .image-1, .image-2 { 
+        position: relative; 
+        width: 140px; 
+        height: 160px; 
+        top: 0; left: 0; right: 0; bottom: 0; 
+        animation: popup 4s infinite; 
+    }
+
+    /* --- 5. NAVBAR & MODALS --- */
+    .navbar-collapse { 
+        background-color: #FABD00; 
+        padding: 1rem; 
+        text-align: center;
+    }
+    .modal-content, .gallery-content { width: 95%; max-height: 85vh; }
+    .modal-buttons { flex-direction: column; }
+    
+    /* --- 6. SMALL MOBILE TWEAKS (<480px) --- */
+    @media (max-width: 480px) {
+        .section-title { font-size: 1.8rem; }
+        .book-now-btn { padding: 12px 30px; width: 100%; }
+        .floating-btn { width: 50px; height: 50px; bottom: 15px; right: 15px; }
+        .map-placeholder { min-height: 250px; }
     }
 }
