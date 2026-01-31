@@ -1,1 +1,9 @@
-@WebAstic Web Solutions PVT Limited is a forward-thinking digital powerhouse dedicated to bridging the gap between sophisticated technology and intuitive user experiences. We specialize in crafting high-performance web ecosystems, bespoke mobile applications, and strategic digital solutions that empower businesses to thrive in an ever-evolving online landscape. At WebAstic, we don’t just write code; we engineer growth by combining clean, scalable architecture with cutting-edge design aesthetics. Driven by a passion for innovation and a commitment to excellence, our team of expert developers and designers works tirelessly to transform complex challenges into seamless digital realities, ensuring that every project we deliver is as functional as it is visually stunning.
+## 📖 About the Project
+
+
+
+**Revive Holidays** is a modern, fully responsive travel agency website designed to provide an immersive experience for travelers. The platform features dynamic tour package listings, an interactive "Happy Moments" gallery, and a seamless booking interface optimized for both desktop and mobile devices. Built with clean HTML5, CSS3, and JavaScript, this project ensures high performance and user engagement.
+
+
+
+**Developed by:** [Webastic.in](https://webastic.in)
