@@ -14,13 +14,15 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-dark);
     background-color: var(--white);
+    /* Prevent unwanted horizontal scroll on the whole page */
+    overflow-x: hidden;
 }
 
 /* ==================== HEADER/NAV ==================== */
@@ -86,7 +88,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* Fixed backgrounds can cause scroll lag on some browsers/devices */
+    background-attachment: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,7 +107,8 @@ body {
     height: 600px;
     background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
     border-radius: 50%;
-    animation: float 8s ease-in-out infinite;
+    /* Removed heavy animation to improve scroll performance */
+    /* animation: float 8s ease-in-out infinite; */
 }
 
 .hero::after {
@@ -116,7 +120,8 @@ body {
     height: 500px;
     background: radial-gradient(circle, rgba(255, 87, 34, 0.1) 0%, transparent 70%);
     border-radius: 50%;
-    animation: float 10s ease-in-out infinite reverse;
+    /* Removed heavy animation to improve scroll performance */
+    /* animation: float 10s ease-in-out infinite reverse; */
 }
 
 @keyframes float {
@@ -224,7 +229,6 @@ body {
         opacity: 0;
     }
 }
-
 .book-now-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(255, 87, 34, 0.4);
@@ -714,32 +718,25 @@ body {
 .carousel-wrapper {
     margin: 4rem 2rem;
     overflow: auto;
-    scroll-behavior: smooth;
-    user-select: none;
-    -webkit-scrollbar: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
 .carousel-wrapper::-webkit-scrollbar {
     display: none;
 }
 
-.carousel-wrapper:active {
-    cursor: grabbing;
-}
-
 .carousel-track {
     display: flex;
     gap: 1.5rem;
-    animation: scrollLTR 40s linear infinite;
-    transition: animation-play-state 0.2s ease;
+    /* Removed continuous animation to reduce scroll lag */
+    /* animation: scrollLTR 40s linear infinite; */
+    /* transition: animation-play-state 0.2s ease; */
 }
 
 
 .carousel-rtl {
-    animation: scrollRTL 40s linear infinite;
-    transition: animation-play-state 0.2s ease;
+    /* Removed continuous animation to reduce scroll lag */
+    /* animation: scrollRTL 40s linear infinite; */
+    /* transition: animation-play-state 0.2s ease; */
 }
 
 @keyframes scrollLTR {
@@ -1454,7 +1451,6 @@ footer {
     .packages-section {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        overflow: hidden; /* Prevents horizontal scroll on the body */
     }
 
     /* Stack Grids Vertically (Default behavior for sections) */
